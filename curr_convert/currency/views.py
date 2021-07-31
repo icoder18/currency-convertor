@@ -21,7 +21,7 @@ def home(request):
 		
 		#base = EUR
 		url = "http://data.fixer.io/api/"+today
-		access_key = '2364f45848fa03cd95188a983ad7e2f5'
+		access_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 		querystring = {"format":"json","access_key":access_key}
 
 		response = requests.request("GET", url, params=querystring)
