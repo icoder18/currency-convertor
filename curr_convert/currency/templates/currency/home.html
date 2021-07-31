@@ -10,9 +10,25 @@
 		<h1 align="middle">Currency Convertor</h1>
 	</div>
 	<div style="margin:auto; width:70%;">
-		<p style="font-size: 20px;">Available currencies: </p>
 		
+		{% block content %}
+
+		<form method="POST">
+			{% csrf_token %}
+			<p>From: <input type="text" name="from"></p>
+			<p>To: <input type="text" name="to"></p>
+			<p>Amount: <input type="text" name="amt"></p>
+			<button type="submit">Submit</button>
+		</form>
+
+		{% if ans %}
+		<p style="font-size: 30px;">Converted: {{ans}}</p>
+		{% endif %}
+
+		{% endblock %}
+
 	</div>
+
 
 </body>
 </html>
